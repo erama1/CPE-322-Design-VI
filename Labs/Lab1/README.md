@@ -40,7 +40,7 @@ $ nano startup_mailer.py
 
 ### I was not receiving an email after reboot and needed to follow the below steps
 
-If not receiving an email from the Raspberry Pi after reboot, create /lib/systemd/system/[startup.service](/lesson1/startup.service)
+If not receiving an email from the Raspberry Pi after reboot, create /lib/systemd/system/[startup.service](/Labs/Lab1/startup.service)
 ```sh
 $ sudo nano /lib/systemd/system/startup.service
 $ sudo systemctl daemon-reload
