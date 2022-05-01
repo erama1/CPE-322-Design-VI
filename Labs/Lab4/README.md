@@ -42,6 +42,14 @@ Reload privilege tables now? [Y/n]
 ```
 ## Start Django project ["stevens,"](https://github.com/kevinwlu/iot/tree/master/lesson4/stevens) run server, and view app 
 
+![django-login](https://user-images.githubusercontent.com/45573682/166138468-77c56985-f87d-4672-aa96-fe9f8c13986b.png)
+
+![data-input](https://user-images.githubusercontent.com/45573682/166138465-b42a5c65-3763-4dee-b269-840098437d93.png)
+
+![weather-station](https://user-images.githubusercontent.com/45573682/166138454-e2ce8122-4a9c-46b4-a59c-576c7107e071.png)
+
 ## Start Django REST project "mycpu," run server, and view app
+
+
 ## If necessary, install Flask
 ## Run Flask server via hello_world.py and view app
