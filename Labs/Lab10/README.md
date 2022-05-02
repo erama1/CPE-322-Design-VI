@@ -1,4 +1,4 @@
-# Lab 10 - Bloackchain
+# Lab 10 - Blockchain
 
 ## Study the GitHub [repository](https://github.com/kevinwlu/iot) Lesson 10
 ## Run hash_value.py twice and compare results
