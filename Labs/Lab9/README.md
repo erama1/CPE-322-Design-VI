@@ -34,6 +34,15 @@ $ sudo apt update
 $ sudo apt install gimp pinta
 $ cd ~/demo
 $ pinta intrusiondetection.png
+```
+![pinta-terminal](https://user-images.githubusercontent.com/45573682/166199940-073fbe29-d3b1-40bf-b978-b62c1c769e93.png)
+
+![pinta-intrusiondetect](https://user-images.githubusercontent.com/45573682/166199954-3a7d1c19-8c99-45b3-bbbb-a939418fb82a.png)
+
+```sh
 $ gimp -h
 $ gimp -a intrusiondetection.png
 ```
+![gimp-terminal](https://user-images.githubusercontent.com/45573682/166199969-f979023e-0ec9-489a-a826-e2a1a729db05.png)
+
+![gimp-intrusiondetect](https://user-images.githubusercontent.com/45573682/166199984-f053e9d0-38d8-4562-af41-31a3b5ab9a04.png)
