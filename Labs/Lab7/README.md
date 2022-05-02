@@ -55,12 +55,12 @@ $ mv ~/Downloads/cpudata-*.json ~/demo
 * Share the spreadsheet with the "client_email" address in the .json file, select “Share,” add the "client_email," and click "Send"
 * May receive an email with the subject "Delivery Status Notification (Failure)" and the message "Address not found" from mailer-daemon@google.com
 * Delete Rows 2 to 1000, and enter Date / Time, CPU Usage %, Temperature C to header cells
-* This deletion is not necessary with the improved [cpu_worksheet.py](/Labs/Lab7/cpu_worksheet.py) that can check the next empty row to write data
+* This deletion is not necessary with the improved [cpu_worksheet.py](/Labs/Lab7/cpu_spreadsheet.py) that can check the next empty row to write data
 
 ## Run cpu_spreadsheet.py with the JSON key file in a demo folder
 * Edit cpu_spreadsheet.py to add .json file name
 ```sh
-$ nano rpi_spreadsheet.py
+$ nano cpu_spreadsheet.py
 ```
 > GDOCS_OAUTH_JSON = 'cpudata-xxxxxxxxxxxx.json'
 
