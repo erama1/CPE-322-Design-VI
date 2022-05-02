@@ -19,22 +19,57 @@ $ python3 thingspeak_feed.py
 An API key savefile was not found. Enter Write API Key >>>
 Should we save this key for future use? [y/N] >>>
 ```
+![thingspeak](https://user-images.githubusercontent.com/45573682/166174870-010850c0-f689-4d82-b519-2a1b24459f6f.png)
+
 * If yes, the Write API Key is saved in API_KEY.pickle
 * Alternatively, replace YOURKEYHERE with the Write API in Line 10 of thingspeak_cpu_loop.py
-
-### Sign up and log in the Google Cloud Platform Identity and Access Management [(IAM)](https://console.developers.google.com/projectselector/iam-admin/iam)
-* The following rpidata project and [rpi_spreadsheet.py](/lesson7/rpi_spreadsheet.py) require Raspberry Pi and system_info.py
-* Alternatively, follow the same steps for a cpudata project and run [cpu_spreadsheet.py](/lesson7/cpu_spreadsheet.py) that does not require Raspberry Pi and system_info.py
-
-* Click "Create" and enter the project name, e.g., rpidata
-* &equiv; > APIs & Services > + Enable APIs & Services > Enable both Drive API and Sheets API
-* Credential > Create Credentials > Create service account key > Service account > rpidata > JSON key type > Create > download rpidata-xxxxxxxxxxxx.json
 
 ## Install gspread and oauth2client
 ```sh
 $ sudo pip3 install -U gspread oauth2client
 ```
 ## Log in the Google Cloud Platform Identity and Access Management, create a project cpudata, enable both Drive API and Sheets API, create and download service account JSON key file
-## Start a new Google sheet cpudata, share it with the client email in the JSON file, delete Rows 2 to 1000, and edit the header cells
-## Run cpu_spreadsheet.py with the JSON key file in a demo folder
+* Click "Create" and enter the project name, e.g., cpudata
+* &equiv; > APIs & Services > + Enable APIs & Services > Enable both Drive API and Sheets API
+* Credential > Create Credentials > Create service account key > Service account > cpudata > JSON key type > Create > download cpudata-xxxxxxxxxxxx.json
 
+## Copy system_info.py and rpi_spreadsheet.py to ~/demo
+* On Raspberry Pi OS (Bullseye), change /opt/vc/bin/vcgencmd to /usr/bin/vcgencmd in system_info.py
+```sh
+$ cd demo
+$ cp ~/iot/lesson3/system_info.py .
+$ cp ~/iot/lesson7/rpi_spreadsheet.py .
+```
+### If the JSON key file (* = xxxxxxxxxxxx) is on a different computer, secure copy it to the same directory as cpu_spreadsheet.py
+```sh
+$ scp cpudata-*.json pi@192.168.x.xxx:/home/pi/demo
+```
+### If the the JSON key file is on a Raspberry Pi, move it to the same directory as cpu_spreadsheet.py
+```sh
+$ mv ~/Downloads/cpudata-*.json ~/demo
+```
+
+## Start a new Google sheet cpudata, share it with the client email in the JSON file, delete Rows 2 to 1000, and edit the header cells
+* Go to [Google Sheets](https://docs.google.com/spreadsheets/u/0)
+* Start a new spreadsheet and name it cpudata
+* Share the spreadsheet with the "client_email" address in the .json file, select “Share,” add the "client_email," and click "Send"
+* May receive an email with the subject "Delivery Status Notification (Failure)" and the message "Address not found" from mailer-daemon@google.com
+* Delete Rows 2 to 1000, and enter Date / Time, CPU Usage %, Temperature C to header cells
+* This deletion is not necessary with the improved [rpi_worksheet.py](/lesson7/rpi_worksheet.py) and [cpu_worksheet.py](/lesson7/cpu_worksheet.py) that can check the next empty row to write data
+
+## Run cpu_spreadsheet.py with the JSON key file in a demo folder
+* Edit cpu_spreadsheet.py to add .json file name
+```sh
+$ nano rpi_spreadsheet.py
+```
+> GDOCS_OAUTH_JSON = 'cpudata-xxxxxxxxxxxx.json'
+
+> GDOCS_SPREADSHEET_NAME = 'cpudata'
+
+* Run rpi_spreadsheet.py
+```sh
+$ python3 rpi_spreadsheet.py
+```
+![sheets-terminal](https://user-images.githubusercontent.com/45573682/166174904-8690c546-58de-4cef-99b2-ddaa4b80c735.png)
+
+![google-sheets](https://user-images.githubusercontent.com/45573682/166174906-df2e53df-9c23-41a6-b6ac-602212e5346a.png)
