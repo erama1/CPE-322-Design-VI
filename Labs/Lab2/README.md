@@ -1,8 +1,7 @@
 # Labs 1 and 2 - Command Line
 
-## Go to the [IoT repo](https://github.com/kevinwlu/iot)
-## Study Lesson 1 & 2
-## Open a terminal
+## Study the GitHub [repository](https://github.com/kevinwlu/iot) Lesson 1 & 2
+### Open a terminal
 
 * $ hostname
 
