@@ -31,6 +31,9 @@ $ mosquitto_sub -h localhost -v -t test/topic &
 ```sh
 $ mosquitto_pub -h localhost -t test/topic -m "Hello"
 ```
+
+![Mosquitto-test](https://user-images.githubusercontent.com/45573682/166170195-64fda7cb-a9ec-490f-ad94-865868da3c17.png)
+
 ### Intall Paho and run code to subscribe on one terminal and publish on another
 ```sh
 $ sudo pip3 install -U paho-mqtt
@@ -46,6 +49,9 @@ $ python3 sub.py
 ```sh
 $ python3 pub.py
 ```
+
+![pub-py](https://user-images.githubusercontent.com/45573682/166170209-ec223e28-b77e-4b7f-ba7a-ee4415d1c8c2.png)
+
 #### Terminal 1 (press control-c to stop)
 ```sh
 $ python3 sub-multiple.py
@@ -54,6 +60,9 @@ $ python3 sub-multiple.py
 ```sh
 $ python3 pub-multiple.py
 ```
+
+![pub-multiple-py](https://user-images.githubusercontent.com/45573682/166170221-389a4091-0bcc-415a-8cd8-b7fe3cf51eb4.png)
+
 #### Terminal 1 (press control-c to stop)
 ```sh
 $ python3 subcpu.py
@@ -62,3 +71,5 @@ $ python3 subcpu.py
 ```sh
 $ python3 pubcpu.py
 ```
+![pubcpu-py](https://user-images.githubusercontent.com/45573682/166170232-4392018a-4d6e-4a9a-bc57-ef84d1c37be5.png)
+
