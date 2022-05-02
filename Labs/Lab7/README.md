@@ -1,6 +1,6 @@
 # Lab 7 - ThingSpeak and Google Sheets
 
-## Study the GitHub [repository]() Lesson 7
+## Study the GitHub [repository](https://github.com/kevinwlu/iot) Lesson 7
 ## Sign up and log in MathWorks ThingSpeak
 * Sign up and log in [ThingSpeak](https://thingspeak.com)
 * Create new channel cpu_loop with field1 cpu_pc and field2 mem_avail_mb
@@ -55,7 +55,7 @@ $ mv ~/Downloads/cpudata-*.json ~/demo
 * Share the spreadsheet with the "client_email" address in the .json file, select “Share,” add the "client_email," and click "Send"
 * May receive an email with the subject "Delivery Status Notification (Failure)" and the message "Address not found" from mailer-daemon@google.com
 * Delete Rows 2 to 1000, and enter Date / Time, CPU Usage %, Temperature C to header cells
-* This deletion is not necessary with the improved [rpi_worksheet.py](/lesson7/rpi_worksheet.py) and [cpu_worksheet.py](/lesson7/cpu_worksheet.py) that can check the next empty row to write data
+* This deletion is not necessary with the improved [cpu_worksheet.py](/Labs/Lab7/cpu_worksheet.py) that can check the next empty row to write data
 
 ## Run cpu_spreadsheet.py with the JSON key file in a demo folder
 * Edit cpu_spreadsheet.py to add .json file name
@@ -66,9 +66,9 @@ $ nano rpi_spreadsheet.py
 
 > GDOCS_SPREADSHEET_NAME = 'cpudata'
 
-* Run rpi_spreadsheet.py
+* Run cpu_spreadsheet.py
 ```sh
-$ python3 rpi_spreadsheet.py
+$ python3 cpu_spreadsheet.py
 ```
 ![sheets-terminal](https://user-images.githubusercontent.com/45573682/166174904-8690c546-58de-4cef-99b2-ddaa4b80c735.png)
 
