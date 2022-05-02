@@ -25,6 +25,9 @@ $ node http.js
 ^C
 $
 ```
+![hello-world-js](https://user-images.githubusercontent.com/45573682/166171114-dba6be39-276b-4b2f-8fe8-b50fd4a6c3ad.png)
+
+![hello-js](https://user-images.githubusercontent.com/45573682/166171119-b99edbcb-7cb9-4eed-94a1-b4ee7dc9c2b8.png)
 
 ## Install Pystache and run say_hello.py that uses the template in say_hello.mustache
 
@@ -42,3 +45,6 @@ Hey Google!
 Hey Siri!
 $
 ```
+
+![pystache](https://user-images.githubusercontent.com/45573682/166171131-1c3efc63-7afa-4df0-b0b2-453d0f71d3a1.png)
+
